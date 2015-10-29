@@ -1,6 +1,7 @@
 from django.test import TestCase, Client
 import json
 
+# This tests are not functional only for reference
 class ClientCrud(TestCase):
     def setUp(self):
         pass
@@ -13,7 +14,7 @@ class ClientCrud(TestCase):
         url = '/clients/'
 
         # Make web reqeust
-        client = client()
+        client = Client()
         client.post(url, clientJson, 'application/json')
 
     def clientGet(self):

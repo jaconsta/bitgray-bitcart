@@ -5,12 +5,12 @@ class Client(models.Model):
     name = models.CharField(max_length=80, db_column='nombres')
     details = models.TextField(db_column='detalles')
 
-    def __str__(self):
+    def __unicode__(self):
         return 'name: %s, identification: %s' % (self.name, self.identification)
     def toJson(self):
         return {
-                'documento' : self.identification, 
-                'nombres': self.name, 
+                'documento' : self.identification,
+                'nombres': self.name,
                 'detalles': self.details
                 }
 

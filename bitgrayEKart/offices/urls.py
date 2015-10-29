@@ -1,7 +1,9 @@
 from django.conf.urls import url
 
-from . import views 
+from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='officesCrud'),
+    # /offices/
+    url(r'^$', views.index, name='officesCr'),
+    url(r'^(?P<officeId>[0-9]+)$', views.crud, name='officesUD')
 ]

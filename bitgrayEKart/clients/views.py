@@ -3,27 +3,27 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 
-import json 
+import json
 
 from .models import Client
 
 def comesPk(clientId):
     return True if 'clientId' in locals() else False
-    
+
 def getAll(total=10):
     '''
     Gets n=TOTAL clients
-    Serializes the result 
+    Serializes the result
     '''
     client = Client.objects.values()[:total]
-    return list(client) 
+    return list(client)
 
 def create(clientFields):
     '''
     CRUD Element: Create.
     '''
-    client = Client(identification=clientFields['identification'], 
-                    name=clientFields['name'], 
+    client = Client(identification=clientFields['identification'],
+                    name=clientFields['name'],
                     details=clientFields['details'])
     client.save()
     return client
@@ -73,7 +73,6 @@ def index (request):
         import sys
         try:
             # Read and parse the Json
-            print (request.body)
             clientFields = json.loads(request.body.decode('utf-8'))
         except ValueError:
             return JsonResponse({'error': 'Incorrect client object.'}, status=400)
@@ -90,7 +89,7 @@ def index (request):
 def crud(request, clientId):
     '''
     Http Methods available:
-        Read: Get the client 
+        Read: Get the client
         Update: Update the client
         Delete: Delete the client
     '''
