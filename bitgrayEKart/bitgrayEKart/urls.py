@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^clients/', include('clients.urls')),
     url(r'^offices/', include('offices.urls')),
     url(r'^products/', include('products.urls')),
-    #url(r'^orders/', include('orders.urls')),
+    url(r'^orders/', include('orders.urls')),
 ]
