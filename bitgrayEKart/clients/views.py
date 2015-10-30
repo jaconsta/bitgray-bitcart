@@ -43,7 +43,7 @@ def update(clientId, clientFields):
     CRUD Element: Update.
     '''
     client = read (clientId)
-    if client == None:  # Client doesn't exists
+    if client == None:  # Client doesn't exist
         return None
 
     if 'identification' in clientFields:
@@ -96,7 +96,7 @@ def crud(request, clientId):
     # Validates the client exists
     client = read(clientId)
     if client == None:
-        return JsonResponse({'error': 'Client does not exists.'}, status=400)
+        return JsonResponse({'error': 'Client does not exist.'}, status=400)
 
     if request.method == 'PUT':
         # Update the record.
@@ -110,7 +110,7 @@ def crud(request, clientId):
 
         client = update(clientId, clientFields)
         if client == None:
-            return JsonResponse({'error': 'Client does not exists.'}, status=400)
+            return JsonResponse({'error': 'Client does not exist.'}, status=400)
         return JsonResponse({'message':'Client updated'})
     elif request.method == 'DELETE':
         # Delete the record.

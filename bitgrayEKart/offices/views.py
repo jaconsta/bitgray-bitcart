@@ -89,7 +89,7 @@ def crud(request, officeId):
     # Validates the office exists
     office = read(officeId)
     if office == None:
-        return JsonResponse({'error': 'office does not exists.'}, status=400)
+        return JsonResponse({'error': 'office does not exist.'}, status=400)
 
     if request.method == 'PUT':
         # Update the record.

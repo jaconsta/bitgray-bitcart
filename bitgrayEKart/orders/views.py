@@ -51,7 +51,7 @@ def officeExists(officeId):
 
 def foreignsValidate(orderFields):
     '''
-    Validates that the Foreigns Key provided do exists and are valid
+    Validates that the Foreigns Key provided do exist and are valid
     '''
     client = clientExists(orderFields['client'])
     if client == None:

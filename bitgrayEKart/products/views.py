@@ -92,7 +92,7 @@ def crud(request, productId):
     # Validates the product exists
     product = read(productId)
     if product == None:
-        return JsonResponse({'error': 'product does not exists.'}, status=400)
+        return JsonResponse({'error': 'product does not exist.'}, status=400)
 
     if request.method == 'PUT':
         # Update the record.
