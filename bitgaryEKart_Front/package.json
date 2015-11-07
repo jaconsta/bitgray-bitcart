@@ -1,0 +1,17 @@
+{
+  "name": "reactTutorialFront",
+  "version": "0.0.0",
+  "description": "The tutorial from react Fb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javier Constain <constainopia@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

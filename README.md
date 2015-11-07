@@ -13,19 +13,42 @@ Api:
 * Urls follows Rest syntax for web services. 
 * Responses are provided via JSON.
 
+web UI:
+* Uses React
+
 ## Instructions
 
+### API
+
 Set The Virtual Environment:
+
     $ python -m venv myenv
     $ source myenv/bin/activate # If Linux
     $ myenv\Scripts\activate.bat # If Windows
+
 And install from requirements:
+
 	$ pip install  -r requirements.txt # --no-index
 
 Create a database with name *bitKart* and run
+
     $ python manage.py migrate
 
 To run the server locally:
+
     $ cd bitgrayEKart
     $ python manage.py runserver 0.0.0.0:8000
-And access [localhost](http://localhost:8000).
+
+And access [localhost](http://localhost:8000) API from your tester.
+
+** web UI
+
+Install server npm modules:
+
+    $ npm install
+
+run server:
+
+    $ grunt
+
+And access [localhost](http://localhost:9000) Web from our web browser.

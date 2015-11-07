@@ -7,7 +7,7 @@ from offices.models import Office
 class Order(models.Model):
     client = models.ForeignKey(Client, db_column='id_cliente')
     product = models.ForeignKey(Product, db_column='id_producto')
-    office = models.ForeignKey(Office, db_column='id_sede')
+    office = models.ForeignKey(Office, db_column='id_sede', null=True)
     price = models.IntegerField(db_column='precio')
     description = models.TextField(db_column='descripcion')
     createdAt = models.DateTimeField(auto_now_add=True, db_column='fecha')
