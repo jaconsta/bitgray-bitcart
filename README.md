@@ -1,4 +1,4 @@
-# BitKart E-Cart application
+# BitKart E-Cart
 
 A simple e-cart application that allows to CRUD operations on clients, products, facilities and orders. Process orders 
 
@@ -15,6 +15,7 @@ Api:
 
 web UI:
 * Uses JQuery for asynchronous queries
+* Bootstrap for quick css styles
 
 ## Instructions
 
