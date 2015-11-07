@@ -5,7 +5,7 @@ A simple e-cart application that allows to CRUD operations on clients, products,
 The entry test for bitgray running:
  * Python 3 for backend.
  * PostgreSQL for data storage.
- * Angular for frontend visualization.
+ * React for frontend visualization.
 
 This application is currently running in this [link](http://bitgrayekart.herokuapp.com).
 
@@ -14,7 +14,7 @@ Api:
 * Responses are provided via JSON.
 
 web UI:
-* Uses React
+* Uses JQuery for asynchronous queries
 
 ## Instructions
 
@@ -41,10 +41,11 @@ To run the server locally:
 
 And access [localhost](http://localhost:8000) API from your tester.
 
-** web UI
+### web UI
 
-Install server npm modules:
-
+Go to the frontent code and Install server npm modules:
+    
+    $ cd bitgaryEKart_Front
     $ npm install
 
 run server:
