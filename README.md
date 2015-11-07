@@ -3,19 +3,20 @@
 A simple e-cart application that allows to CRUD operations on clients, products, facilities and orders. Process orders 
 
 The entry test for bitgray running:
- * Python 3 for backend.
- * PostgreSQL for data storage.
- * React for frontend visualization.
+ * [Python 3](https://www.python.org/) for backend.
+ * [PostgreSQL](http://www.postgresql.org/) for data storage.
+ * [React](https://facebook.github.io/react/) for frontend visualization.
 
 This application is currently running in this [link](http://bitgrayekart.herokuapp.com).
 
 Api: 
+* [Django](https://www.djangoproject.com/) for the API construction.
 * Urls follows Rest syntax for web services. 
 * Responses are provided via JSON.
 
 web UI:
-* Uses JQuery for asynchronous queries
-* Bootstrap for quick css styles
+* Uses [JQuery](https://jquery.com/) for asynchronous queries.
+* [Bootstrap](http://getbootstrap.com/) for quick css styles
 
 ## Instructions
 
