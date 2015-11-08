@@ -17,7 +17,7 @@ class Order(models.Model):
 
     def toJson(self):
         return {
-            'Cliente': {'id': self.client.pk, 'nombre': self.client.name},
+            'Cliente': {'id': self.client.pk, 'nombre': self.client.name, 'documento': self.client.identification},
             'Producto': {'id': self.product.pk, 'producto': self.product.product},
             'Oficina': {'id': self.office.pk, 'sede': self.office.office},
             'Precio': self.price,

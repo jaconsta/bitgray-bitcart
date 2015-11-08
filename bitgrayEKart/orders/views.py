@@ -74,6 +74,14 @@ def getAll(total=10):
     orderJson = map(lambda order: order.toJson(), orders)
     return list(orderJson)
 
+def getFromUserCardId(userDocId):
+    '''
+    Gets the total user's Orders from his id card
+    '''
+    orders = Order.objects.filter(client__identification = userDocId)
+    orderJson = map(lambda order: order.toJson(), orders)
+    return list(orderJson)
+
 def create(orderFields, client, product, office):
     '''
     CRUD Element: Create.
@@ -152,7 +160,13 @@ def index(request):
         order = create(orderFields, client, product, office)
         return JsonResponse({'message': 'order Posted.', 'order': order.toJson()})
     else: 
-        return JsonResponse({'orders': getAll()})
+        # Validate if client cardID comes 
+        userId = request.GET.get('userId', False)
+        if userId:
+            orders = getFromUserCardId(userId)
+        else :
+            orders = getAll()
+        return JsonResponse({'orders': orders})
 
 @csrf_exempt
 def crud(request, orderId):
